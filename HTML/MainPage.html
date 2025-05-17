@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="MainPageStyle1.css"/>
+    <script>
+      function Welcome(){
+        let name =prompt("What's your name ? ");
+        if(name!=null){
+        document.getElementById("button").innerHTML='<h3 style="text-align:center;color:#302e2e">Welcome '+ name+' ♡</h3>';
+          
+          }
+          else {
+            document.getElementById("button").innerHTML='<h3 style="text-align:center;color:#302e2e">Welcome !! </h3>';
+          }
+      }
+    </script>
+</head>
+<body>
+    <header class="header">
+      <div><img src="pngegg.png" height="100" width="100" alt="logo"/> 
+      <h1>Florin</h1>
+      </div>
+    </header>
+      <nav class="navbar">
+        <ul>
+        <li><a href="MainPage.html">Home</a></li>
+        <li><a href="abut us --.html">About</a></li>
+
+        <li><a href="#">Products</a>
+          <ul class="menu">
+            <li><a href="Plant.html">Plants</a></li>
+            <li><a href="Flowers.html">Flowers</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li> 
+      </ul>
+      </nav>
+    
+
+    <div class="buttonC">
+      
+  <button id="button" onclick="Welcome()">Let's get to know each other !!</button>
+    </div>
+    <p class="image">Discover the beauty of nature with our fresh flowers and lush plants !<br/><br/>
+    <button class="get-started"><a href="GetStarted.html">Get started</a></button>
+    </p>
+
+    <div  class="features" style="text-align: center;">
+        <h2>Our Features:</h2>
+      
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+          <div class="box">
+            Fresh Flowers Daily
+          </div>
+          <div class="box">
+            Healthy, Thriving Plants
+          </div>
+          <div class="box">
+            Perfect for Every Occasion
+          </div>
+          <div class="box">
+            Eco-Friendly and Sustainable
+          </div>
+        </div>
+      </div>
+    <div class="contact">
+        <h3>Contact us :</h3>
+        <p>Have questions or feedback? Get in touch with us anytime!</p>
+        <a href="mailto:wsnwsnrr@gmail.com">Email us</a></Email>
+    </div>
+  </body>
+</html>

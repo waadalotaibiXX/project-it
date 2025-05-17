@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #FBD2CF; /* اللون الوردي الفاتح */
+      margin: 0;
+      padding: 0;
+      direction: ltr;
+      color: #333;
+    }
+
+    /* الهيدر */
+    .header {
+      padding: 20px;
+      width: 100%;
+      background-color: #FBD2CF;
+    }
+
+    .header div {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .header h1 {
+      color: #302e2e;
+      text-align: center;
+      font-family: Garamond, Georgia;
+      font-size: 70pt;
+      margin: 0px;
+    }
+
+    /* شريط التنقل */
+    .navbar ul {
+      list-style-type: none;
+      background-color: #FEB4A7;
+      padding-left: 100px;
+      margin: 0px;
+      display: flex;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      position: relative;
+    }
+
+    .navbar a {
+      color: #302e2e;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #FEB4A7;
+    }
+
+    .navbar ul li ul.menu li {
+      display: block;
+    }
+
+    .navbar ul li ul.menu {
+      position: absolute;
+      z-index: 999;
+      display: none;
+      padding: 2px;
+      background-color: #FEB4A7;
+    }
+
+    .navbar ul li:hover ul.menu {
+      display: block;
+    }
+
+    /* محتوى الصفحة */
+    .cart {
+      background: white;
+      padding: 30px;
+      margin: 20px auto;
+      width: 80%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #66BB33;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #F1F4C5; /* أصفر باهت لرأس الجدول */
+    }
+
+    .btn-confirm {
+      background-color: #4CAF50; /* أخضر */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header class="header">
+    <div>
+      <img src="pngegg.png" height="100" width="100" alt="logo"/>
+      <h1>Florin</h1>
+    </div>
+  </header>
+
+  <!-- شريط التنقل -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="MainPage.html">Home</a></li>
+      <li><a href="abut us --.html">About</a></li>
+      <li><a href="#">Products</a>
+        <ul class="menu">
+          <li><a href="plant.html">Plants</a></li>
+          <li><a href="Flowers.html">Flowers</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- محتوى عربة التسوق -->
+  <div class="cart">
+    <h2>Products</h2>
+    <table id="cartTable">
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+    </table>
+    <button class="btn-confirm"><a href="checkout.html" style="text-decoration: none; color:#302e2e">Confirm Order</a></button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function Cart() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartTable = document.getElementById('cartTable');
+
+      cart.forEach(item => {
+        let row = cartTable.insertRow();
+        row.insertCell(0).innerText = item.name; // اسم المنتج
+        row.insertCell(1).innerText = item.price + ' SAR'; // السعر
+      });
+    }
+
+    Cart();
+  </script>
+  
+</body>
+</html>

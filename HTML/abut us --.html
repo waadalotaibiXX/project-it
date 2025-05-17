@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Florin - About Us</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FED5CD;
+      color: #333;
+      direction: rtl;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* الهيدر الأصلي من زميلتك */
+    .header {
+      padding: 20px;
+      width: 100%;
+      background-color: #FBD2CF;
+    }
+
+    .header div {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .header h1 {
+      color: #302e2e;
+      text-align: center;
+      font-family: Garamond, Georgia;
+      font-size: 60pt;
+      margin: 0px;
+    }
+
+    /* شريط التنقل */
+    .navbar ul {
+      list-style-type: none;
+      background-color: #FEB4A7;
+      padding-left: 100px;
+      margin: 0px;
+      display: flex;
+    }
+
+    .navbar ul li {
+      display: inline-block;
+      position: relative;
+    }
+
+    .navbar a {
+      color: #302e2e;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    .navbar a:hover {
+      background-color: #FEB4A7;
+    }
+
+    .navbar ul li ul.menu li {
+      display: block;
+    }
+
+    .navbar ul li ul.menu {
+      position: absolute;
+      z-index: 999;
+      display: none;
+      padding: 2px;
+      background-color: #FEB4A7;
+    }
+
+    .navbar ul li:hover ul.menu {
+      display: block;
+    }
+
+    .about {
+      background-color: #F8EDEB;
+      padding: 50px;
+      border-radius: 15px;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about h1 {
+      color: #FEB4A7;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about p {
+      font-style: italic;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .about p::before {
+      content: "•";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      font-size: 24px;
+      color: #FEB4A7;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #FADBC6;
+      margin-top: 50px;
+      border-top: 5px solid #FEB4A7;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header class="header">
+    <div>
+      <img src="pngegg.png" height="100" width="100" alt="logo"/>
+      <h1>Florin</h1>
+    </div>
+  </header>
+
+  <!-- شريط التنقل -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="MainPage.html">Home</a></li>
+      <li><a href="abut us --.html">About</a></li>
+      <li><a href="#">Products</a>
+        <ul class="menu">
+          <li><a href="Plant.html">Plants</a></li>
+          <li><a href="Flowers.html">Flowers</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- محتوى الصفحة -->
+  <div class="about">
+    <h1>About Florin</h1>
+    <p>
+      Florin is a company dedicated to providing top-notch software solutions to clients in various industries. Founded in 2021, our mission has been to offer innovative and advanced services that drive success and enhance the performance of our clients
+    </p>
+    <p>
+      Our team is composed of specialists in diverse fields such as web development, UI/UX design, and advanced programming. We believe that collaboration and innovation are the keys to achieving success
+    </p>
+    <p>
+      At Florin, we prioritize building strong, lasting relationships with our clients and ensuring full support throughout all phases of their projects
+    </p>
+  </div>
+
+  <!-- الفوتر -->
+  <div class="footer">
+    <p>© 2025 All rights reserved to Florin</p>
+  </div>
+
+  <script>
+    document.querySelector('.footer').addEventListener('click', function() {
+      alert("Thank you for visiting Florin's website!");
+    });
+  </script>
+
+</body>
+</html>

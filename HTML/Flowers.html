@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+
+<script>
+    function AddToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({name: productName, price: price});
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + " :) Yes, your Flowe has been added to the cart!");
+            window.location.href = 'cart page.html';}
+</script>
+
+<head>
+    <style>
+       body{
+    margin:0px; 
+}
+
+.header{
+    padding:20px;
+    width:100%;
+}
+    .header div {
+    display:flex;
+    align-items:center;
+    padding:10px;
+    
+    }
+
+    .header h1{color :#302e2e; 
+        text-align: center;
+        font-family:  Garamond ,Georgia ;
+        font-size: 70pt;
+        margin:0px;}
+
+
+.navbar ul{
+            list-style-type: none; 
+            background-color:#FEB4A7;
+            padding-left: 100px;
+            margin:0px;
+            display: flex;
+
+        }
+
+
+.navbar ul li{  
+ display:inline-block;
+ position:relative; 
+ 
+      
+}
+ .navbar a{
+            color : #302e2e;
+            text-decoration: none;
+            padding:10px;
+            display: block;
+            text-align:center;
+            
+
+        }
+ 
+        .navbar a:hover {
+            background-color: #FEB4A7;
+        }
+.navbar ul li a{
+    display:block;
+    
+}
+
+.navbar ul li ul.menu li {
+    display:block;
+}
+.navbar ul li ul.menu {
+    width:auto;
+    position:absolute; 
+    z-index: 999;
+    display:none;
+    padding:2px;
+    
+    
+    
+} 
+.navbar ul li:hover ul.menu{
+    display:block;
+}
+
+        .container {
+
+            display: flex;
+            padding-top: 90px;
+            justify-content: center;
+            gap: 100px;
+            flex-wrap: wrap;
+        }
+
+        .product-box {
+            border: 2px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffe4e1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-box:hover {
+            transform: scale(1.05);
+        }
+
+
+        P {
+            color: #FEB4A7;
+            font-size: large;
+            font-family: Garamond, Georgia;
+            padding: 5px;
+
+            
+        }
+
+        button { 
+color:#FEB4A7;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+ font-size: smaller;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div><img src="pngegg.png" height="100" width="100" alt="logo"/> 
+        <h1>Florin</h1>
+        </div>
+      </header>
+        <nav class="navbar">
+          <ul>
+          <li><a href="MainPage.html">Home</a></li>
+          <li><a href="abut us --.html">About</a></li>
+  
+          <li><a href="#">Products</a>
+            <ul class="menu">
+              <li><a href="plant.html">Plants</a></li>
+              <li><a href="Flowers.html">Flowers</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li> 
+        </ul>
+        </nav>
+    
+        <div class="container">
+            <div class="product-box">
+
+
+                <img src="photo_2025-04-28_20-17-38.jpg">
+                <p><strong>Mixed Baby Rose Bouquet</strong> </p>
+                <h4>500<img src="photo_2025-04-28_21-10-03-removebg-preview.png" alt="Riyal"
+                        style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"></h4>
+                <div class="product-box img">
+
+                    <button onclick="AddToCart ('Mixed Baby Rose Bouquet' ,500)">
+                      
+                        Add To Cart 🛒</button>
+
+
+
+
+                </div>
+
+            </div>
+
+            <div class="product-box">
+
+                <img src="photo_2025-04-28_20-17-28.jpg">
+                <p><strong>Baby Roses Bouqute</strong> </p>
+                <h4>320<img src="photo_2025-04-28_21-10-03-removebg-preview.png" alt="Riyal"
+                        style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"></h4>
+                <div class="product-box img">
+                    <button onclick="AddToCart ('Baby Roses Bouqute',400)" >Add
+                        To Cart 🛒</button>
+
+
+                </div>
+            </div>
+
+            <div class="product-box">
+
+                <img src="photo_2025-04-28_20-17-43.jpg">
+                <p><strong>Magical Purple</strong></p>
+                <h4>300<img src="photo_2025-04-28_21-10-03-removebg-preview.png" alt="Riyal"
+                        style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"></h4>
+                <div class="product-box img">
+                    <button   onclick="AddToCart ('Magical Purple',300)">
+                        Add To Cart 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <img src="photo_2025-04-28_21-25-43.jpg">
+                <p><strong>Fresh Start Bouqute</strong></p>
+                <h4>230<img src="photo_2025-04-28_21-10-03-removebg-preview.png" alt="Riyal"
+                        style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"></h4>
+                <div class="product-box img">
+                    <button onclick="AddToCart ('Fresh Start Bouqute ',300)"> Add To Cart 🛒</button>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="product-box">
+
+                <img src="photo_2025-04-28_21-25-44.jpg">
+                <p><strong>Red Rose Bouquet</strong></p>
+                <h4>160<img src="photo_2025-04-28_21-10-03-removebg-preview.png" alt="Riyal"
+                        style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"></h4>
+                <div class="product-box img">
+                    <button onclick="AddToCart ('Red Rose Bouquet',160)">
+                        Add To Cart 🛒</button>
+                </div>
+
+            </div>
+            <div class="product-box">
+
+                <img src="photo_2025-04-28_21-25-45.jpg">
+                <p><strong>Pink Lily Bouquet</strong></p>
+                <h4>150<img src="photo_2025-04-28_21-10-03-removebg-preview.png" alt="Riyal"
+                        style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"></h4>
+                <div class="product-box img">
+                    <button onclick="AddToCart ('Pink Lily Bouquet',150)">
+                        Add To Cart 🛒</button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    
+
+</body>
+</html>

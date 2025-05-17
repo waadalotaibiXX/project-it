@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florin</title>
+    
+    <style>
+        body {
+            margin: 0px; 
+        }
+
+        .header {
+            padding: 20px;
+            width: 100%;
+        }
+
+        .header div {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header h1 {
+            color: #302e2e; 
+            text-align: center;
+            font-family: Garamond, Georgia;
+            font-size: 70pt;
+            margin: 0px;
+        }
+
+        .navbar ul {
+            list-style-type: none; 
+            background-color: #FEB4A7;
+            padding-left: 100px;
+            margin: 0px;
+            display: flex;
+        }
+
+        .navbar ul li {  
+            display: inline-block;
+            position: relative; 
+        }
+
+        .navbar a {
+            color: #302e2e;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #FEB4A7;
+        }
+
+        .navbar ul li a {
+            display: block;
+        }
+
+        .navbar ul li ul.menu li {
+            display: block;
+        }
+
+        .navbar ul li ul.menu {
+            width: auto;
+            position: absolute; 
+            z-index: 999;
+            display: none;
+            padding: 2px;
+        } 
+
+        .navbar ul li:hover ul.menu {
+            display: block;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #c3d18d;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            width: calc(25% - 40px); 
+            box-sizing: border-box;
+            background-color: white; /* لون خلفية أبيض */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            text-align: center;
+            color: #333;
+        }
+        .product p {
+            text-align: center;
+            color: #666;
+        }
+        .product button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; 
+            transition: background-color 0.3s, transform 0.3s;
+
+        }
+        .product button:hover {
+            background-color: #e9edca;
+            transform: translateY(-2px);
+
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px); 
+            }
+        }
+        @media (max-width: 480px) {
+            .product {
+                width: calc(100% - 40px); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            <img src="pngegg.png" height="100" width="100" alt="logo"/> 
+            <h1>Florin</h1>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a>
+                <ul class="menu">
+                    <li><a href="plant.html">Plants</a></li>
+                    <li><a href="Flowers.html">Flowers</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li> 
+        </ul>
+    </nav>
+    <header>
+        <h1>Grow Your Own Favourite Plant</h1>
+        <h1>We Take Care of Your Beautiful Garden</h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="https://th.bing.com/th/id/R.7c549f234118c6c2d7675d7ec37cbf3d?rik=AP15mDjPxyzyVQ&pid=ImgRaw&r=0" alt="plant 1">
+            <h3>Croton Plant</h3>
+            <p> 88 <img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align: middle;"></p>
+           <button onclick="addToCart('Croton Plant', 88)">Add to Cart</button>      
+
+                    </div>
+        
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/1706/1307/products/Epipremnum-aureum-Golden-Pothos-28x60cm_800x.jpg?v=1618234617" alt="Pothos plant">
+            <h3>Pothos Plant</h3>
+            <p> 50 <img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align: middle;"></p>
+           <button onclick="addToCart('Pothos Plant', 50)">Add to Cart</button>      
+
+                    </div>
+
+        <div class="product">
+            <img src="https://th.bing.com/th/id/R.b47148c34d6f4375d1c2fa4eed05ec37?rik=B2WOHTAjNrOE3g&riu=http%3a%2f%2fplantaffair.com%2fwp-content%2fuploads%2f2010%2f04%2fAnthurium.jpg&ehk=xCQOnpXpNLzLpFtzWrAGJ%2bfb9CMaXTU9q3sDz2H0Gdo%3d&risl=&pid=ImgRaw&r=0" alt="plant 3">
+            <h3>Anthurium Plant</h3>
+            <p> 90 <img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align: middle;"></p>
+             <button onclick="addToCart('Anthurium Plant', 90)">Add to Cart</button>      
+         
+            </div>
+
+        <div class="product">
+            <img src="https://th.bing.com/th/id/OIP.FuVPXTJOrCdTanzeinD_swHaIp?rs=1&pid=ImgDetMain" alt="plant 4">
+            <h3>Peperomia Plant</h3>
+            <p> 60 <img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align: middle;"></p>
+             <button onclick="addToCart('Peperomia Plant', 60)">Add to Cart</button>      
+      
+              </div>
+       
+        <div class="product">
+            <img src="https://nabataty.com/store/wp-content/uploads/2025/04/4445227012712.jpg" alt="plant 5">
+            <h3>Philodendron Plant</h3>
+            <p> 77<img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align: middle;"></p>
+            <button onclick="addToCart('Philodendron Plant', 77)">Add to Cart</button>      
+      
+              </div>
+
+        <div class="product">
+            <img src="https://nabataty.com/store/wp-content/uploads/2025/04/B1-1.jpg" alt="plant 6">
+            <h3> Bamboo Stalk</h3>
+            <p> 20<img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align: middle;"></p>
+            <button onclick="addToCart('Bamboo Stalk', 20)">Add to Cart</button>      
+ 
+                    </div>
+             
+        
+        <div class="product">
+            <img src="https://nabataty.com/store/wp-content/uploads/2024/07/S2.jpg" alt="plant 7">
+            <h3> Cactus</h3>
+            <p> 10<img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align: middle;"></p>
+             <button onclick="addToCart('Cactus', 10)">Add to Cart</button>      
+   
+                  </div>
+
+        <div class="product">
+            <img src="https://nabataty.com/store/wp-content/uploads/2024/01/4445227012107.jpg" alt="plant 8">
+            <h3> Snake plant</h3>
+            <p> 40<img src="https://th.bing.com/th/id/OIP.j_6gSIq75JToo9s1lT-XRAHaIR?rs=1&pid=ImgDetMain" alt="Riyal" style="width: 20px; vertical-align:middle;"></p>
+           <button onclick="addToCart('Snake plant', 40)">Add to Cart</button>      
+  </div>
+    </div>
+
+
+
+    <!-- JS-->
+       <script>
+        function addToCart(productName, price) {//fun:addtocart تاخذ اسم النبة الذي اريدها و سعرها
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({name: productName, price: price});
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + " :) Yes, your plant has been added to the cart!");
+            window.location.href = 'cart page.html'; //  ينقل المستخدم لصفحة الدفع
+//addtocart تقوم ب اضافة المنتج الى سلة التسوق ثم يظهر لليوزر ان تم اضافة النبتة  وينقله لصفحه الدفع
+        }
+    </script>
+    <!-- JS-->
+
+
+
+</body>
+</html>

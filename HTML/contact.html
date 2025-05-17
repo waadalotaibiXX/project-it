@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+       body{
+    margin:0px; 
+}
+
+.header{
+    padding:20px;
+    width:100%;
+}
+    .header div {
+    display:flex;
+    align-items:center;
+    padding:10px;
+    
+    }
+
+    .header h1{color :#302e2e; 
+        text-align: center;
+        font-family:  Garamond ,Georgia ;
+        font-size: 70pt;
+        margin:0px;}
+
+
+.navbar ul{
+            list-style-type: none; 
+            background-color:#FEB4A7;
+            padding-left: 100px;
+            margin:0px;
+            display: flex;
+
+        }
+
+
+.navbar ul li{  
+ display:inline-block;
+ position:relative; 
+ 
+      
+}
+ .navbar a{
+            color : #302e2e;
+            text-decoration: none;
+            padding:10px;
+            display: block;
+            text-align:center;
+            
+
+        }
+ 
+        .navbar a:hover {
+            background-color: #FEB4A7;
+        }
+.navbar ul li a{
+    display:block;
+    
+}
+
+.navbar ul li ul.menu li {
+    display:block;
+}
+.navbar ul li ul.menu {
+    width:auto;
+    position:absolute; 
+    z-index: 999;
+    display:none;
+    padding:2px;
+    
+    
+    
+} 
+.navbar ul li:hover ul.menu{
+    display:block;
+}
+
+
+
+
+.contact-container {
+            width: 90%;
+            max-width: 500px;
+            margin: 100px auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            padding: 10PX;
+            color: #FEB4A7;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size:   Garamond ,Georgia;
+        }
+        label {
+            display: block;
+            margin-bottom: 1px;
+            color:#FEB4A7;
+            font-weight: bold;
+            font-size:   Garamond ,Georgia;
+        }
+
+       
+      
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #FEB4A7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover 
+           {
+            background-color:#FEB4A7;
+           }
+       
+
+
+
+
+
+</style>
+</head>
+<body>
+
+    <header class="header">
+        <div><img src="pngegg.png" height="100" width="100" alt="logo"/> 
+        <h1>Florin</h1>
+        </div>
+      </header>
+        <nav class="navbar">
+          <ul>
+          <li><a href="MainPage.html">Home</a></li>
+          <li><a href="abut us --.html">About</a></li>
+  
+          <li><a href="#">Products</a>
+            <ul class="menu">
+              <li><a href="plant.html">Plants</a></li>
+              <li><a href="Flowers.html">Flowers</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li> 
+        </ul>
+        </nav>
+
+        
+
+        <h2>CONTACT US</h2>
+        <div class="contact-container">
+        <form action="" method="post" >
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" required><br><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email"  name="email" required><br><br>
+    
+           
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message"  rows="5" cols="30" required></textarea><br><br>
+    
+            <input type="submit" value="submit" >
+            <input type="reset"  value="reset">
+        </form>
+    
+        </div>
+</body>
+</html>
