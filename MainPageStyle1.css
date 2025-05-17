@@ -1,0 +1,174 @@
+*{
+    background-color: #F8EDEB;
+      
+}
+
+body{
+    margin:0px; 
+}
+
+.header{
+    padding:20px;
+    width:100%;
+}
+    .header div {
+    display:flex;
+    align-items:center;
+    padding:10px;
+    
+    }
+
+    .header h1{color :#302e2e; 
+        text-align: center;
+        font-family:  Garamond ,Georgia ;
+        font-size: 70pt;
+        margin:0px;}
+
+
+.navbar ul{
+            list-style-type: none; 
+            background-color:#FEB4A7;
+            padding-left: 100px;
+            margin:0px;
+            display: flex;
+
+        }
+
+
+.navbar ul li{  
+ display:inline-block;
+ position:relative; 
+ 
+      
+}
+ .navbar a{
+            color : #302e2e;
+            text-decoration: none;
+            padding:10px;
+            display: block;
+            text-align:center;
+            
+
+        }
+ 
+        .navbar a:hover {
+            background-color: #FEB4A7;
+        }
+.navbar ul li a{
+    display:block;
+    
+}
+
+.navbar ul li ul.menu li {
+    display:block;
+}
+.navbar ul li ul.menu {
+    width:auto;
+    position:absolute; 
+    z-index: 999;
+    display:none;
+    padding:2px;
+    
+    
+    
+} 
+.navbar ul li:hover ul.menu{
+    display:block;
+}
+
+ 
+
+.buttonC{
+    text-align: center;
+    display:flex;
+    padding :0px;
+    align-items: center;
+    justify-content: center;
+    padding:50px;
+    
+}
+#button{
+    
+    border: none;  
+    outline:none; 
+    display:flex;
+    text-align: center;
+    cursor:pointer;
+    font-family:  Garamond ,Georgia ;
+    font-size: 30px;
+    
+}
+
+#button:hover {
+    transform: scale(1.1);
+}
+
+
+        
+        .image{text-align:center;
+            background-image:  url(Background1.jpeg);
+            font-size: 25pt;
+            background-size: cover;
+            padding:120px;
+            font-family:  Garamond ,Georgia;
+            color:#F8EDEB;
+            font-size:24pt ;
+            font-weight:bolder;
+            }
+        
+        .features{
+            font-size: large;
+            text-align: center;
+            color:#302e2e;
+            font-family:  Garamond ,Georgia ;
+
+        }
+
+        .box{ border: 1px solid #F8EDEB;
+            box-shadow: #efb9b0 -5px -5px 20px 0  ;
+            font-size: 20px;
+            border-radius: 20pt; 
+            padding: 20px;
+            width: 200px;
+            background-color: #F8EDEB;}
+        
+        .box:hover{
+            transform: scale(1.1);
+        }
+
+        .get-started {
+            background-color:#F8EDEB ;
+            padding: 10px 20px;
+            border: 1px solid #FEB4A7;
+            border-radius: 24pt;
+              }
+        
+.get-started a {
+    text-decoration: none;
+    color:#302e2e;
+    font-family:  Garamond ,Georgia ;
+    font-size:20px;
+
+}
+
+.contact{
+    text-align: center;
+    padding :30px;
+    font-size: 25px;
+    font-family:  Garamond ,Georgia ;
+    color:#302e2e;
+}
+
+.contact a{
+    text-decoration: none;
+    font-family:  Garamond ,Georgia ;
+    font-size: 35px;
+    cursor: pointer;
+    color:#302e2e
+}
+
+.contact a:hover{
+    cursor:pointer;
+    color:white;
+    transform: scale(1.2);
+}
